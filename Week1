@@ -1,0 +1,12 @@
+1. find 2nd largest integer in an unsorted array with n + log2 n -2 comparison:
+	divide and conquer: winner has a field that keeps track of its losers after each comparison. 2nd largest will only lose to largest.
+	Find the largest by divide and conquer and find the max amongst its loser
+
+2. find the peak of a unimodal array:
+	Take 3 points at 1/4, 1/2, 3/4 : divide array into 4 equal parts.
+		Increasing: recurse last part;
+		decreasing: recurse 1st part;
+		else : check midpoint + 1th: increasing -> recurse between 1/2 and 3/4, else 1/4 - 1/2
+	O(log n)
+
+3. binary search
